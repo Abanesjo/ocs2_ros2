@@ -29,6 +29,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#include <Python.h>
+
+#if PY_VERSION_HEX >= 0x030b0000
+#include <frameobject.h>
+#include <internal/pycore_frame.h>
+#endif
+
 #include <pybind11/eigen.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
